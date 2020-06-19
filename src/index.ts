@@ -20,6 +20,6 @@ export const compose = (...fns: Function[]) => (x: any) => fns.reduceRight((y, f
 
 export const pipe = (...fns: Function[]) => (x: any) => fns.reduce((y, f) => f(y), x)
 
-export const qs = (cssSelector: string) => (parentNode: HTMLElement) => parentNode.querySelector(cssSelector)
+export const qs = (cssSelector: string) => (parentNode: HTMLElement): HTMLElement => parentNode.querySelector(cssSelector) as HTMLElement
 
-export const qsa = (cssSelector: string) => (parentNode: HTMLElement) => parentNode.querySelectorAll(cssSelector)
+export const qsa = (cssSelector: string) => (parentNode: HTMLElement): NodeList => parentNode.querySelectorAll(cssSelector)
