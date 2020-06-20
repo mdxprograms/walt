@@ -7,6 +7,11 @@
   "dependencies": {},
   "devDependencies": {
     "@rollup/plugin-typescript": "^4.1.2",
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
+    "eslint": "^7.3.0",
+    "eslint-plugin-import": "^2.21.2",
+    "parcel-bundler": "^1.12.4",
     "rollup": "^2.17.1",
     "rollup-plugin-terser": "^6.1.0",
     "tslib": "^2.0.0",
@@ -14,9 +19,11 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w & parcel examples/index.html"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC"
